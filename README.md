@@ -8,16 +8,16 @@ You can install this package using your favorite package manager:
 
 ```bash
 # npm
-npm install @alkinguler/better-try-catch
+npm install @arukin/better-try-catch
 
 # bun
-bun add @alkinguler/better-try-catch
+bun add @arukin/better-try-catch
 
 # yarn
-yarn add @alkinguler/better-try-catch
+yarn add @arukin/better-try-catch
 
 # pnpm
-pnpm add @alkinguler/better-try-catch
+pnpm add @arukin/better-try-catch
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ pnpm add @alkinguler/better-try-catch
 Wrap your promises to safely handle errors without `try/catch` blocks.
 
 ```typescript
-import { tryCatch } from '@alkinguler/better-try-catch';
+import { tryCatch } from '@arukin/better-try-catch';
 
 async function fetchUser(userId: string) {
 	// Notice how we don't need a try/catch block!
@@ -48,7 +48,7 @@ async function fetchUser(userId: string) {
 Use it for synchronous code that might throw exceptions, like `JSON.parse`.
 
 ```typescript
-import { tryCatchSync } from '@alkinguler/better-try-catch';
+import { tryCatchSync } from '@arukin/better-try-catch';
 
 function parseConfig(jsonString: string) {
 	const { data, error } = tryCatchSync(() => JSON.parse(jsonString));
@@ -67,7 +67,7 @@ function parseConfig(jsonString: string) {
 We provide handy `isSuccess` and `isFailure` type guards to safely narrow down the `Result` type.
 
 ```typescript
-import { tryCatch, isSuccess, isFailure } from '@alkinguler/better-try-catch';
+import { tryCatch, isSuccess, isFailure } from '@arukin/better-try-catch';
 
 async function processData() {
 	const result = await tryCatch(someAsyncOperation());
